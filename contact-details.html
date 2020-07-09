@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Details</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        .body-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            min-height: 20vh;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            background-color: #000000;
+            align-items: center;
+        }
+        
+        .footer {
+            background-color: #000000;
+            min-height: 30vh;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .logo-img {
+            height: 15vh;
+        }
+        
+        .model-content a {
+            font-weight: lighter;
+            color: #E5E5E5;
+        }
+        
+        .left a {
+            color: #ffffff;
+        }
+        
+        .left a:hover {
+            text-decoration: unset;
+            color: #E5E5E5;
+        }
+        
+        .right {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .right i {
+            margin-left: 10%;
+        }
+        
+        .navbar-toggler {
+            color: #ffffff;
+        }
+        
+        .navbar-toggler:focus {
+            outline: unset;
+        }
+        
+        .top {
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .top img {
+            height: 60px;
+        }
+        
+        .mid {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-weight: lighter;
+            font-size: 0.7rem;
+            color: #ffffff;
+            text-align: center;
+            height: 30%;
+        }
+        
+        .bot {
+            width: 20%;
+            display: flex;
+            flex-direction: row;
+            height: 30%;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+        }
+        
+        .bot i {
+            color: #ffffff;
+        }
+        
+        .main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+        .main-top {
+            padding-top: 3%;
+            padding-bottom: 3%;
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            margin: 0 auto;
+        }
+        
+        .main-mid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .main-bot {
+            display: flex;
+        }
+        
+        .details-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background-color: white;
+            border: 1px solid black;
+            height: 30px;
+            width: 150px;
+            border-radius: 20px;
+        }
+        
+        .btn-slected {
+            background-color: black;
+            color: white;
+        }
+        
+        .collapsible {
+            cursor: pointer;
+            padding: 18px;
+            width: 60%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .collapsible:after {
+            content: '\25BC';
+            color: black;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .active:after {
+            content: "\25B2";
+        }
+        
+        .content {
+            width: 60%;
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+        
+        button:focus {
+            outline: unset;
+        }
+        
+        .qs-left {
+            padding-top: 3%;
+            padding-left: 10%;
+            width: 60%;
+        }
+        
+        .qs-right {
+            padding-top: 3%;
+            padding-right: 10%;
+            width: 40%;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body-container">
+        <div class="header">
+            <img alt="logo" src="images/logo.png" class="logo-img">
+            <div class="container">
+                <div class="row">
+                    <nav class="left col-sm-8 navbar navbar-expand-lg">
+                        <a class="nav-link" href="#">MODELS</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-caret-down fa-lg"></i>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">PRICING</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">COMPANY</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">CONTACT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="right col-sm-4">
+                        <i class="fas fa-search fa-lg"></i>
+                        <i class="fas fa-bars fa-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-top">
+                <div class="details-btn btn-slected">COMPANY</div>
+                <div class="details-btn">PRODUCTS</div>
+                <div class="details-btn">EXPERICENCES</div>
+            </div>
+            <div class="main-mid">
+
+                <button class="collapsible">Are you looking for your nearest Ducati Authorized Dealer?</button>
+                <div class="content">
+                    <p>You can find the Ducati Authorized Dealer nearest to you in the section "Find Dealers" </p>
+                </div>
+                <button class="collapsible">Are you interested in doing your thesis or an internship at Ducati?</button>
+                <div class="content">
+                    <p>If you are interested in doing your thesis or an internship at Ducati, please visit the "Work with us" section of our website.</p>
+                </div>
+                <button class="collapsible">Are you looking for material for your thesis?</button>
+                <div class="content">
+                    <p>Visit the Ducati website in the "Company" and "History" sections, where you will find lots of useful and periodically updated information. </p>
+                </div>
+                <button class="collapsible">Would you like to work for Ducati?</button>
+                <div class="content">
+                    <p>Visit the "Open positions" area on our website or send an application using the form provided.</p>
+                </div>
+                <button class="collapsible">Would you like to visit our Museum?</button>
+                <div class="content">
+                    <p>The Museum visit is possible without reservation for individuals or groups up to 10 people. Here you will find all the details about the visit to the Museum. </p>
+                </div>
+                <button class="collapsible">Would you like to become an official sponsor of the Ducati Corse Team?</button>
+                <div class="content">
+                    <p>A partnership with Ducati in the MotoGP and Superbike Championships can guarantee excellent results, not only in terms of advertising and promotion, but also from a commercial point of view. For more information fill in the form. </p>
+                </div>
+            </div>
+            <div class="main-bot">
+                <div class="qs-left">
+                    <p>Can't find the answer you're looking for? <br />You can contact us directly by filling in the contact form.</p>
+                </div>
+                <div class="qs-right">
+                    <p>Fill the Contact Form</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="top">
+                <img alt="ducati-text" src="images/ducati-text.png" class="ducati-text">
+            </div>
+            <div class="mid">
+                <p>Copyright © 2020 Ducati Motor Holding S.p.A. – A Sole Shareholder Company - A Company subject to the Management and Coordination <br/> activities of AUDI AG. All rights reserved. VAT 05113870967</p>
+            </div>
+            <div class="bot">
+                <i class="fab fa-facebook-f fa-lg"></i>
+                <i class="fab fa-twitter fa-lg"></i>
+                <i class="fab fa-instagram fa-lg"></i>
+                <i class="fab fa-youtube fa-lg"></i>
+                <i class="fab fa-linkedin-in fa-lg"></i>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
