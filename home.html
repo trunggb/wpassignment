@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- coppy to all page use js -->
     <script src="script.js"></script>
     <style>
         .body-container {
@@ -115,7 +116,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="body-container">
         <div class="header">
@@ -193,24 +193,42 @@
                 <i class="fab fa-instagram fa-lg"></i>
                 <i class="fab fa-youtube fa-lg"></i>
                 <i class="fab fa-linkedin-in fa-lg"></i>
-
             </div>
         </div>
-        
         <div id="signin-modal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
+                  <h5 class="modal-title">Sign in</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Modal body text goes here.</p>
+                  <p>Sign in dialog body</p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-primary">Login</button>
+                  <button type="button" id="register-btn" class="btn btn-secondary">Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="signup-modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Register</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Sign up dialog body</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Sign up</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
               </div>
