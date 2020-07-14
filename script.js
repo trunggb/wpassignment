@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    url = 'http://localhost/dashboard/'
+    url = 'http://localhost/dashboard/wpassignment/'
         
     manageData();
     
