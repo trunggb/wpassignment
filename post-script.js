@@ -22,36 +22,24 @@ $(document).ready(function() {
               rows = rows + '<div class="container">';
               rows = rows + '<div class="ava-container">';
               rows = rows + '<i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>';
-              rows = rows + '<p>Trung B</p></div><div>';
+              rows = rows + '<p>'+ value.by_member +'</p></div><div>';
               rows = rows + '<p>' + value.content + '</p>';
               rows = rows + '</div></div></button>';
-            //   rows = rows + '';
-            //   rows = rows + '';
-            //   rows = rows + '';
-            //   rows = rows + '';
-            //   rows = rows + '';
-            //   rows = rows + '';
-            //   rows = rows + '';
-              
-            //   rows = rows + '<td>'+ no +'</td>';
-            //   rows = rows + '<td>'+value.fname+'</td>';
-            //   rows = rows + '<td>'+value.lname+'</td>';
-            //   if(value.gender == "Male"){
-            //     rows = rows + '<td><i class="fa fa-mars" aria-hidden="true" style="color:#3aadf0;"></i></td>';
-            //   }else{
-            //     rows = rows + '<td><i class="fa fa-venus" aria-hidden="true" style="color:#eb558d;"></i></td>';
-            //   }
-              
-            //   rows = rows + '<td>'+value.email+'</td>';
-            //   rows = rows + '<td>'+value.phone+'</td>';
-            //   rows = rows + '<td>'+value.address+'</td>';
-            //   rows = rows + '<td>'+value.type+'</td>';
-            //   rows = rows + '<td data-id="'+value.id+'">';
-            //   rows = rows + '<button data-toggle="modal" data-target="#edit-account" class="btn btn-dark edit-account"><i class="fa fa-bars" aria-hidden="true"></i></button> ';
-            //   rows = rows + '<button class="btn btn-secondary remove-account"><i class="fa fa-trash" aria-hidden="true"></i></button>';
-            //   rows = rows + '</td>';
-            //   rows = rows + '</tr>';
-            //   no++;
+
+              rows = rows + '<div class="content">';
+              $.each(value.comment, function(key1, value1){
+                rows = rows + '<div class="row">';
+                rows = rows + '<div class="col-2">';
+                rows = rows + '<p>' + 'Trung B'+ '</p>';
+                rows = rows + '</div><div class="col-10">';
+                rows = rows + '<p>' + value1.content+ '</p>';
+                rows = rows + '</div></div>';
+              })
+              rows = rows + '<div class="row input-group mb-3">';
+              rows = rows + '<div class="input-group-prepend">';
+              rows = rows + '<span class="input-group-text" id="inputGroup-sizing-default">';
+              rows = rows + '<i class="fa fa-comments fa-lg" aria-hidden="true"></i>';
+              rows = rows + '</span></div><input type="text" placeholder="Write a comment" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"></div></div>';
         });
         $(".main-mid").html(rows);
     }
